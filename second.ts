@@ -1,5 +1,6 @@
-function greet(greeting:string){
-    return "${greeting} World"
+function greet(greeting:string):number{
+    // return "${greeting} World"
+    return 1
 }
 
-const message:string = greet("Hello")
+const message:number = greet("Hello")
