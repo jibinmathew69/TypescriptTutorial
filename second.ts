@@ -3,3 +3,4 @@ function greet(greeting:string, name:string = "John"):string{
 }
 
 const message:string = greet("Hello", "Jibin")
+const message2:string = greet("Hello")
