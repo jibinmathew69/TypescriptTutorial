@@ -1,4 +1,6 @@
-function greet({greeting, name}:{greeting:string, name:string}):string{
+type Salutation = {greeting:string, name:string}
+
+function greet({greeting, name}:Salutation):string{
     return "${greeting} ${name}"
 }
 
