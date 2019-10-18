@@ -1,4 +1,4 @@
-function greet(greeting:string, name:string):string{
+function greet(greeting:string, name:string = "John"):string{
     return "${greeting} ${name}"
 }
 
