@@ -1,6 +1,5 @@
-function greet(greeting:string, name:string = "John"):string{
+function greet(options:{greeting:string, name:string}):string{
     return "${greeting} ${name}"
 }
 
-const message:string = greet("Hello", "Jibin")
-const message2:string = greet("Hello")
+const message:string = greet({"greeting":"Hello", "name":"Jibin"})
