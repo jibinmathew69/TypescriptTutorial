@@ -4,7 +4,7 @@
  * @param {string} greeting
  * @return {string}
  */
-function greet(greeting){
+function greet(greeting: string){
     return greeting
 }
 
