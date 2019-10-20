@@ -13,7 +13,7 @@ class Weather implements Subject{
     private observers: Observer[] = []
 
     setTemperature(temp: number){
-        console.log("New temperature value : ${temp}")
+        console.log("New temperature value : " + temp)
         this.temperature = temp
         this.notifyObservers()
     }
@@ -43,7 +43,7 @@ class Temperature implements Observer{
     }
 
     public update(temperature: number): void {
-        console.log("Temperature: ${temperature}")
+        console.log("Temperature: "+temperature)
     }
 }
 
