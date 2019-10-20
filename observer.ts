@@ -33,6 +33,35 @@ class Weather implements Subject{
     
 }
 
-class Temperature{
+class Temperature implements Observer{
+    private subject: Subject
 
+    
+    constructor(weather: Subject) {
+        this.subject = weather
+        weather.registerObserver(this)
+    }
+
+    public update(temperature: number): void {
+        console.log("Temperature: ${temperature}")
+    }
 }
+
+class Fan implements Observer{
+    private subject: Subject
+
+    
+    constructor(weather: Subject) {
+        this.subject = weather
+        weather.registerObserver(this)
+    }
+
+    public update(temperature: number): void {
+        if(temperature > 25){
+            console.log("Turning on")
+        }else{
+            console.log("Turning off")
+        }
+    }
+}
+
