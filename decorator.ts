@@ -60,3 +60,8 @@ class RearSeat extends CarOptions{
     }
 }
 
+let myTesla = new ModelS()
+myTesla = new RearSeat(myTesla)
+
+console.log(myTesla.getDescription())
+console.log(myTesla.cost())
