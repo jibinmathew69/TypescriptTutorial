@@ -1,7 +1,7 @@
 interface Subject{
     registerObserver(o: Observer): void
     removeObserver(o: Observer): void
-    notifyObserver(): void
+    notifyObservers(): void
 }
 
 interface Observer{
@@ -10,20 +10,25 @@ interface Observer{
 
 class Weather implements Subject{
     private temperature: number
+    private observers: Observer[] = []
 
     setTemperature(temp: number){
         console.log("New temperature value : ${temp}")
         this.temperature = temp
+        this.notifyObservers()
     }
-    
-    registerObserver(o: Observer): void {
-        throw new Error("Method not implemented.");
+
+    public registerObserver(o: Observer): void {
+        this.observers.push(o)
     }
-    removeObserver(o: Observer): void {
-        throw new Error("Method not implemented.");
+    public removeObserver(o: Observer): void {
+        let index = this.observers.indexOf(o)
+        this.observers.splice(index, 1)
     }
-    notifyObserver(): void {
-        throw new Error("Method not implemented.");
+    public notifyObservers(): void {
+        for (let observer of this.observers){
+            observer.update(this.temperature)
+        }
     }
     
 }
