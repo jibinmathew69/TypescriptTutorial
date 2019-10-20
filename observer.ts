@@ -1,11 +1,11 @@
 interface Subject{
     registerObserver(o: Observer): void
     removeObserver(o: Observer): void
-    notifyObserver()
+    notifyObserver(): void
 }
 
 interface Observer{
-
+    update(temperature: number): void
 }
 
 class Weather{
