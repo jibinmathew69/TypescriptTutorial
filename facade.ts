@@ -75,4 +75,27 @@ class HomeTheatreFacade{
         this.popcornMaker = popcornMaker;
     }
 
+    public watchMovie() {
+        this.popcornMaker.turnOn();
+        this.popcornMaker.pop();
+
+        this.lights.dim();
+
+        this.tv.turnOn();
+
+        this.amp.on();
+        this.amp.setSource('bluray');
+        this.amp.setVolume(11);
+
+        this.bluray.on();
+        this.bluray.play();
+    }
+
+    publib endMovie() {
+        this.popcornMaker.turnOff();
+        this.amp.turnOff();
+        this.tv.turnOff();
+        this.bluray.turnOff();
+    }
+
 }
