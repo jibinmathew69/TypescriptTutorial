@@ -66,4 +66,13 @@ class HomeTheatreFacade{
     private lights : Lights;
     private tv : TV;
     private popcornMaker: PopcornMaker;
+
+    constructor(amp: Amplifier, bluray: BlurayPlayer, lights: Lights, tv: TV, popcornMaker: PopcornMaker){
+        this.bluray = bluray;
+        this.amp = amp;
+        this.lights = lights;
+        this.tv = tv;
+        this.popcornMaker = popcornMaker;
+    }
+
 }
