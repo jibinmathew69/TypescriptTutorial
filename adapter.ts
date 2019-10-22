@@ -31,3 +31,7 @@ class LightToMicroAdapter implements androidint{
     }
 }
 
+let iphoneDevice = new iphone()
+let adapter = new LightToMicroAdapter(iphoneDevice)
+
+adapter.useUSB()
