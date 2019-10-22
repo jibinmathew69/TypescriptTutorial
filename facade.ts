@@ -91,11 +91,19 @@ class HomeTheatreFacade{
         this.bluray.play();
     }
 
-    publib endMovie() {
+    public endMovie() {
         this.popcornMaker.turnOff();
         this.amp.turnOff();
         this.tv.turnOff();
         this.bluray.turnOff();
     }
-
 }
+
+let bluray = new BlurayPlayer();
+let amp = new Amplifier();
+let lights = new Lights();
+let tv = new TV();
+let popcornMaker = new PopcornMaker();
+
+let hometheater = new HomeTheaterFacade(amp, bluray, lights, tv, popcornMaker);
+hometheater.watchMovie();
