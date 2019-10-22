@@ -59,3 +59,11 @@ class PopcornMaker{
         console.log('Popping corn!');
     }
 }
+
+class HomeTheatreFacade{
+    private bluray: BlurayPlayer;
+    private amp: Amplifier;
+    private lights : Lights;
+    private tv : TV;
+    private popcornMaker: PopcornMaker;
+}
