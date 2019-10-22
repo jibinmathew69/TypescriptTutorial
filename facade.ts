@@ -105,5 +105,5 @@ let lights = new Lights();
 let tv = new TV();
 let popcornMaker = new PopcornMaker();
 
-let hometheater = new HomeTheaterFacade(amp, bluray, lights, tv, popcornMaker);
+let hometheater = new HomeTheatreFacade(amp, bluray, lights, tv, popcornMaker);
 hometheater.watchMovie();
