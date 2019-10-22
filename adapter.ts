@@ -17,3 +17,17 @@ class pixel implements androidint{
         console.log("USB charger")
     }
 }
+
+class LightToMicroAdapter implements androidint{
+    iphoneDevice: iphone
+
+    constructor(iphone: iphone) {
+        this.iphoneDevice = iphone
+    }
+
+    useUSB(): void {
+        console.log("using microUSB")
+        this.iphoneDevice.useLighting()
+    }
+}
+
