@@ -1,18 +1,18 @@
-interface iphone{
-
+interface iphoneint{
+    useLighting(): void
 }
 
-interface android{
-    
+interface androidint{
+    useUSB(): void
 }
 
-class iphone{
+class iphone implements iphoneint{
     public useLighting(){
         console.log("lighting charger")
     }
 }
 
-class pixel{
+class pixel implements androidint{
     public useUSB(){
         console.log("USB charger")
     }
